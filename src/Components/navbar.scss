@@ -1,0 +1,88 @@
+.navbar {
+  color: #fff;
+  height: 70px;
+  display: flex;
+  align-items: center;
+	position: fixed;
+	width: 100%;
+	background: linear-gradient(0deg, rgba(250,82,82,0) 48%, rgba(33,33,33,1) 100%);
+	z-index: 999;
+	top: 0;
+
+	&.scrolled{
+		background-color: var(--main-color);
+	}
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .left-area {
+    display: flex;
+    align-items: center;
+    .logo {
+      height: 30px;
+      margin-right: 100px;
+    }
+    .menu-item {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+  .right-area {
+    display: flex;
+    align-items: center;
+    .avatar {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+    .icon {
+      margin-right: 10px;
+      margin-left: 10px;
+			cursor: pointer;
+
+    }
+		.sub-menu-contaoner{
+			position: relative;
+			cursor: pointer;
+
+			&:hover{
+				.sub-menu{
+					display: flex;
+				}
+			}
+
+			.sub-menu{
+				position: absolute;
+				top: 100%;
+				left: -30px;
+				display: none;
+				flex-direction: column;
+				background: var(--main-color);
+				padding: 10px;
+				transition: 0.3s ease-in;
+				-webkit-transition: 0.3s ease-in;
+				-moz-transition: 0.3s ease-in;
+				-ms-transition: 0.3s ease-in;
+				-o-transition: 0.3s ease-in;
+
+				span
+{
+					margin:  3px 0;
+					display: block;
+					cursor: pointer;
+				}
+			}
+
+		}
+
+  }
+}
